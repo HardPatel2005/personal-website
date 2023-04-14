@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title> <img src="hard1-removebg-preview.png" alt="">
+        my personal website</title>
+    <link rel="stylesheet" href=" style .css">
+    <link rel="stylesheet" href="p.js">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: transparent;
+
+        }
+
+        .middle-section {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            background-color: #f0f0f0;
+        }
+
+        .middle-section h1 {
+            font-size: 3rem;
+            font-weight: bold;
+            margin: 0;
+            text-align: center;
+        }
+
+        .blink {
+            animation: blink 1s linear infinite;
+        }
+
+        @keyframes blink {
+            0% {
+                opacity: 0;
+            }
+
+            50% {
+                opacity: 1;
+            }
+
+            100% {
+                opacity: 0;
+            }
+        }
+
+        .profile-pic {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            background-image: url('hard1-removebg-preview.png');
+            background-size: cover;
+            margin-top: 2rem;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+        }
+
+        nav {
+            background-color: #333;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 10px;
+        }
+
+        .name {
+            font-size: 28px;
+            display: flex;
+            align-items: center;
+            margin-right: 20px;
+        }
+
+        .menu-icon {
+            display: inline-block;
+            color: white;
+            font-size: 30px;
+            cursor: pointer;
+            background-color: transparent;
+        }
+
+        .menu {
+            display: none;
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            position: absolute;
+            top: 60px;
+            left: 0;
+            background-color: #333;
+            width: 100%;
+            z-index: 1;
+        }
+
+        .menu li {
+            text-align: center;
+            margin: 10px 0;
+        }
+
+        .menu li a {
+            display: block;
+            color: white;
+            text-decoration: none;
+            padding: 10px;
+        }
+
+        @media only screen and (min-width: 768px) {
+            .menu {
+                display: block;
+                position: static;
+                background-color: transparent;
+                width: auto;
+            }
+
+            .menu-icon {
+                display: none;
+            }
+        }
+
+        button {
+            background-color: #4CAF50;
+            /* Green */
+            border: none;
+            color: white;
+            padding: 12px 24px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            margin-left: 20px;
+        }
+
+        button:hover {
+            background-color: #3e8e41;
+        }
+
+        button:active {
+            background-color: #1e5024;
+        }
+
+        .contact:hover .icons {
+            display: flex;
+            flex-direction: column;
+            animation: appear 0.5s ease forwards;
+        }
+
+        @keyframes appear {
+            from {
+                opacity: 0;
+                transform: translateY(-10px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .icons a {
+            color: #fff;
+            margin-bottom: 10px;
+            transition: transform 0.2s ease;
+        }
+
+        .icons a:hover {
+            transform: scale(1.2);
+        }
+
+        .icons {
+            display: none;
+        }
+
+        .icons-list {
+            display: none;
+        }
+
+        .contact.clicked+.icons-list {
+            display: block;
+        }
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+
+</head>
+
+<body>
+    <nav>
+        <div class="name">
+            Hard Patel
+            <button class="contact">Contact</button>
+            <div class="icons-list">
+                <ul class="ul">
+                    <li><i class="fab fa-whatsapp"></i></li>
+                    <li><a href="https://www.instagram.com/hard_patel201/?hl=en" <i class="fab fa-instagram"></i></li>
+                    </a>
+                    <li><a href="https://www.linkedin.com/in/hard-patel-4149ab25a/"><i class="fab fa-linkedin"></i></li>
+                    </a>
+                </ul>
+            </div>
+        </div>
+
+        <div class="menu-icon" onclick="toggleMenu()">&#9776;</div>
+        <ul class="menu" id="menu">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Services</a></li>
+
+        </ul>
+    </nav>
+    <div class="middle-section">
+        <h1>Hello, I'm Hard Patel</h1>
+        <div class="blink">a front-end web developer</div>
+        <div class="profile-pic"></div>
+    </div>
+
+    <script>
+        function toggleMenu() {
+            var menu = document.getElementById("menu");
+            if (menu.style.display === "block") {
+                menu.style.display = "none";
+            } else {
+                menu.style.display = "block";
+            }
+        }
+        const contactBtn = document.querySelector('.contact');
+        contactBtn.addEventListener('click', () => {
+            contactBtn.classList.toggle('clicked');
+        });
+
+    </script>
+</body>
+
+</html>
