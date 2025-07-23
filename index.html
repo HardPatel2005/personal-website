@@ -2,188 +2,9 @@
 <html>
 
 <head>
-    <title> 
-        my personal website</title>
-    <link rel="stylesheet" href=" style .css">
-    <link rel="stylesheet" href="p.js">
-    <style>
-        body {
-            margin: 0;
-            padding: 0;
-            background-color: transparent;
-
-        }
-
-        .middle-section {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            height: 100vh;
-            background-color: #f0f0f0;
-        }
-
-        .middle-section h1 {
-            font-size: 3rem;
-            font-weight: bold;
-            margin: 0;
-            text-align: center;
-        }
-
-        .blink {
-            animation: blink 1s linear infinite;
-        }
-
-        @keyframes blink {
-            0% {
-                opacity: 0;
-            }
-
-            50% {
-                opacity: 1;
-            }
-
-            100% {
-                opacity: 0;
-            }
-        }
-
-        .profile-pic {
-            width: 150px;
-            height: 150px;
-            border-radius: 50%;
-            background-image: url('hard1-removebg-preview.png');
-            background-size: cover;
-            margin-top: 2rem;
-            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
-        }
-
-        nav {
-            background-color: #333;
-            color: white;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            padding: 10px;
-        }
-
-        .name {
-            font-size: 28px;
-            display: flex;
-            align-items: center;
-            margin-right: 20px;
-        }
-
-        .menu-icon {
-            display: inline-block;
-            color: white;
-            font-size: 30px;
-            cursor: pointer;
-            background-color: transparent;
-        }
-
-        .menu {
-            display: none;
-            margin: 0;
-            padding: 0;
-            list-style: none;
-            position: absolute;
-            top: 60px;
-            left: 0;
-            background-color: #333;
-            width: 100%;
-            z-index: 1;
-        }
-
-        .menu li {
-            text-align: center;
-            margin: 10px 0;
-        }
-
-        .menu li a {
-            display: block;
-            color: white;
-            text-decoration: none;
-            padding: 10px;
-        }
-
-        @media only screen and (min-width: 768px) {
-            .menu {
-                display: block;
-                position: static;
-                background-color: transparent;
-                width: auto;
-            }
-
-            .menu-icon {
-                display: none;
-            }
-        }
-
-        button {
-            background-color: #4CAF50;
-            /* Green */
-            border: none;
-            color: white;
-            padding: 12px 24px;
-            text-align: center;
-            text-decoration: none;
-            display: inline-block;
-            font-size: 16px;
-            border-radius: 4px;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            margin-left: 20px;
-        }
-
-        button:hover {
-            background-color: #3e8e41;
-        }
-
-        button:active {
-            background-color: #1e5024;
-        }
-
-        .contact:hover .icons {
-            display: flex;
-            flex-direction: column;
-            animation: appear 0.5s ease forwards;
-        }
-
-        @keyframes appear {
-            from {
-                opacity: 0;
-                transform: translateY(-10px);
-            }
-
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        .icons a {
-            color: #fff;
-            margin-bottom: 10px;
-            transition: transform 0.2s ease;
-        }
-
-        .icons a:hover {
-            transform: scale(1.2);
-        }
-
-        .icons {
-            display: none;
-        }
-
-        .icons-list {
-            display: none;
-        }
-
-        .contact.clicked+.icons-list {
-            display: block;
-        }
-    </style>
+    <title>
+        Hard Patel - Personal Website</title>
+    <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
 
 </head>
@@ -192,47 +13,143 @@
     <nav>
         <div class="name">
             Hard Patel
-            <button class="contact">Contact</button>
-            <div class="icons-list">
-                <ul class="ul">
-                    <li><i class="fab fa-whatsapp"></i></li>
-                    <li><a href="https://www.instagram.com/hard_patel201/?hl=en" <i class="fab fa-instagram"></i></li>
-                    </a>
-                    <li><a href="https://www.linkedin.com/in/hard-patel-4149ab25a/"><i class="fab fa-linkedin"></i></li>
-                    </a>
-                </ul>
+            <div class="contact-container">
+                <button class="contact">Contact</button>
+                <div class="icons-list">
+                    <ul>
+                        <li><a href="https://wa.me/YOUR_WHATSAPP_NUMBER" target="_blank" rel="noopener noreferrer"><i class="fab fa-whatsapp"></i> WhatsApp</a></li>
+                        <li><a href="instagram.com/hard_patel201/" target="_blank" rel="noopener noreferrer"><i class="fab fa-instagram"></i> Instagram</a></li>
+                        <li><a href="https://www.linkedin.com/in/hard-patel-4149ab25a/" target="_blank" rel="noopener noreferrer"><i class="fab fa-linkedin"></i> LinkedIn</a></li>
+                        </ul>
+                </div>
             </div>
         </div>
 
         <div class="menu-icon" onclick="toggleMenu()">&#9776;</div>
         <ul class="menu" id="menu">
-            <li><a href="#">Home</a></li>
-            <li><a href="#">About</a></li>
-            <li><a href="#">Services</a></li>
-
-        </ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#projects">Projects</a></li> </ul>
     </nav>
-    <div class="middle-section">
+
+    <div class="middle-section" id="home">
         <h1>Hello, I'm Hard Patel</h1>
         <div class="blink">a front-end web developer</div>
         <div class="profile-pic"></div>
     </div>
 
-    <script>
-        function toggleMenu() {
-            var menu = document.getElementById("menu");
-            if (menu.style.display === "block") {
-                menu.style.display = "none";
-            } else {
-                menu.style.display = "block";
-            }
-        }
-        const contactBtn = document.querySelector('.contact');
-        contactBtn.addEventListener('click', () => {
-            contactBtn.classList.toggle('clicked');
-        });
+    <section id="about" class="about-section">
+        <div class="container">
+            <div class="section-title">
+                <h2>About Me</h2>
+                <p>Learn more about my skills, experience, and passion for web development.</p>
+            </div>
+            <p>
+                I am a passionate and dedicated full-stack web developer with a keen eye for detail and a love for creating intuitive and engaging user experiences. My expertise spans both front-end and back-end technologies, allowing me to build robust, scalable, and dynamic web applications from conception to deployment. I specialize in modern frameworks and libraries, always striving to write clean, efficient, and maintainable code that delivers exceptional results.
+                <br><br>
+                Beyond coding, I am a continuous learner, constantly exploring new technologies, solving complex challenges, and staying abreast of industry trends. I thrive in collaborative environments and am always eager to contribute my skills to impactful projects. My goal is to leverage technology to solve real-world problems and bring innovative ideas to life on the web.
+            </p>
+        </div>
+    </section>
 
-    </script>
+
+    <section id="projects" class="projects-section">
+        <div class="container">
+            <div class="section-title">
+                <h2>Projects</h2>
+                <p>Here are some of my featured projects and tools I’ve worked on recently.</p>
+            </div>
+
+            <div class="table-responsive">
+                <table class="table table-bordered table-striped">
+                    <thead class="thead-dark">
+                        <tr>
+                            <th>Project</th>
+                            <th>Description & Links</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>AI Symptom Classifier</strong></td>
+                            <td>
+                                A Django-based AI tool that classifies symptoms using LangGraph and Google Gemini API.<br>
+                                <strong>Live:</strong> <a href="https://symptom-classifier.onrender.com" target="_blank" rel="noopener noreferrer">symptom-classifier.onrender.com</a><br>
+                                <strong>GitHub:</strong> <a href="https://github.com/HardPatel2005/symptom_classifier_project" target="_blank" rel="noopener noreferrer">GitHub Repo</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><strong>Job Portal Website (MERN Stack)</strong></td>
+                            <td>
+                                Full-featured job portal with separate roles for Students and Recruiters.<br>
+                                <strong>Live:</strong> <a href="https://jobportalwebsiteusingmern.onrender.com/" target="_blank" rel="noopener noreferrer">jobportalwebsiteusingmern.onrender.com</a><br>
+                                <strong>GitHub:</strong> <a href="https://github.com/HardPatel2005/job_portal_Website" target="_blank" rel="noopener noreferrer">GitHub Repo</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><strong>ReWear – Sustainable Fashion Swap Platform</strong></td>
+                            <td>
+                                Web app for clothing swaps via direct or point-based system with role-based controls.<br>
+                                <strong>Live:</strong> <a href="https://rewear-4tga.onrender.com" target="_blank" rel="noopener noreferrer">rewear-4tga.onrender.com</a><br>
+                                <strong>GitHub:</strong> <a href="https://github.com/HardPatel2005/Rewear" target="_blank" rel="noopener noreferrer">GitHub Repo</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><strong>Full-Stack Blog Application</strong></td>
+                            <td>
+                                Blog platform with role-based access using Next.js, Prisma, PostgreSQL, Clerk, and real-time features.<br>
+                                <strong>Live:</strong> <a href="https://blogapp-main-hard-patels-projects.vercel.app/" target="_blank" rel="noopener noreferrer">blogapp-main-hard-patels-projects.vercel.app</a><br>
+                                <strong>GitHub:</strong> <a href="https://github.com/HardPatel2005/blogapp-main" target="_blank" rel="noopener noreferrer">GitHub Repo</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><strong>YOLO Object Detection</strong></td>
+                            <td>
+                                Real-time object detection system using YOLOv3 and OpenCV in Python.<br>
+                                <strong>GitHub:</strong> <a href="https://github.com/HardPatel2005/perceptionX-main" target="_blank" rel="noopener noreferrer">GitHub Repo</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><strong>Docs2PPT – Convert PDF/DOCX to AI-Generated Slides</strong></td>
+                            <td>
+                                Flask app to convert uploaded files into presentations using Gemini API with automated cleanup.<br>
+                                <strong>Live:</strong> <a href="https://version0docs2ppt.onrender.com/" target="_blank" rel="noopener noreferrer">version0docs2ppt.onrender.com</a><br>
+                                <strong>GitHub:</strong> <a href="https://github.com/HardPatel2005/version0docs2ppt" target="_blank" rel="noopener noreferrer">GitHub Repo</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><strong>Heart Disease Prediction (ML)</strong></td>
+                            <td>
+                                Binary classification model to predict heart disease using clinical data from UCI Cleveland dataset.<br>
+                                <strong>Colab:</strong> <a href="https://colab.research.google.com/drive/1wuz0wyBMLyJeXKTy9Gz39s1ljqeHFOqY?usp=sharing" target="_blank" rel="noopener noreferrer">Notebook</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><strong>Handwritten Digit Classifier (MNIST)</strong></td>
+                            <td>
+                                ANN trained on MNIST for handwritten digit classification with multi-layer deep architecture.<br>
+                                <strong>Colab:</strong> <a href="https://colab.research.google.com/drive/1wuz0wyBMLyJeXKTy9Gz39s1ljqeHFOqY?usp=sharing" target="_blank" rel="noopener noreferrer">Notebook</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><strong>Aquatic Animal Image Classifier</strong></td>
+                            <td>
+                                Deep learning image classifier using transfer learning with MobileNetV2 and TensorFlow Hub.<br>
+                                <strong>Colab:</strong> <a href="https://colab.research.google.com/drive/1wuz0wyBMLyJeXKTy9Gz39s1ljqeHFOqY?authuser=2#scrollTo=aYJtfLrOH4U-" target="_blank" rel="noopener noreferrer">Notebook</a>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Hard Patel. All rights reserved.</p>
+        <p>Built with ❤️ by Hard Patel</p>
+    </footer>
+
+    <script src="hard.js"></script>
+
 </body>
 
 </html>

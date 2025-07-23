@@ -1,199 +1,403 @@
-body{
-    background:white;
-    color:white;
-     display: flex;
-    justify-content: center;
-    align-items: center;
+body {
+    margin: 0;
+    padding: 0;
+    background-color: transparent; /* This will make the background of body transparent */
+    font-family: Arial, sans-serif; /* Basic font */
+}
+
+/* Middle Section (Home) */
+.middle-section {
+    display: flex;
     flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: #f0f0f0; /* Light gray background for the middle section */
+    padding: 20px; /* Add some padding */
+    box-sizing: border-box; /* Include padding in height calculation */
+    color: #333; /* Default text color for this section */
 }
-.main{
-   
-   height:calc(90vh+20px);
-   width:300px;
-    background:red;
-    border-radius:20px;
-    box-shadow: 0 0 12px #cccbc8,
-    1px 1px 12px rgb(31, 30, 30);
-    
+
+.middle-section h1 {
+    font-size: 3rem;
+    font-weight: bold;
+    margin: 0;
+    text-align: center;
+    color: #333; /* Darker text for better contrast */
 }
-#ans{
-    height:150px;
-    width:300px;
-    background:black;
-    border-radius:20px 20px 0 0;
-    color:white;
-    
+
+.blink {
+    animation: blink 1s linear infinite;
+    color: #666; /* Slightly darker text for the blinking part */
+    font-size: 1.5rem;
+    margin-top: 10px;
 }
-#screen{
-    height: 150px;
-    width: 295px !important;
-    overflow:auto;
-    
-    text-align:end;
-    font-size:3.65rem;
-    display:flex;
-    align-items:end;
-    justify-content:end;
-   position:relative;
-    flex-wrap:wrap;
-    
-    
-    
-}
-#screen:before{
-    content:"";
-    height:60px;
-    width:3px;
-    background:orange;
-      transform:translate(0,-8%);
-   position:absolute;
-   animation-name: example;
-animation-duration: 1.6s;
-animation-iteration-count:infinite;
-}
-/*
-#bar{
-    height:60px;
-    width:3px;
-    background:orange;
-   margin-left:98%; 
-   transform:translate(0,0%);
-   
-   animation-name: example;
-animation-duration: 1.6s;
-animation-iteration-count:infinite;
-}*/
-@keyframes example {
-  50% {
-    opacity:1;
-        
+
+@keyframes blink {
+    0% {
+        opacity: 0;
     }
-    100%{
-    opacity:0;
 
-}
-    
+    50% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
 }
 
-
-#mode{
-    color: black;
-    background: black;
-    height:20px;
-    width: 300px;
-    padding-bottom: 1%;
-    padding-top:0.5%;
-    position: relative;
-   box-shadow: 0 0.5px 0.5px rgb(116, 114, 114);
-    
-    
-}
-#span_main{
-    display: flex;
-   height: 20px;
-   width: 40px;
-   background: white;
-   margin-left: 3%;
-   border-radius: 20px;
-   position: relative;
-   align-items: center;
-   box-shadow: inset 0px 0px 4px rgb(116, 114, 114);
-   
-
-    
-}
-/* #span_main:before{
-    content: " ";
-    height:15px;
-    width: 15px;
-    background-color: rgb(248, 244, 244);
+.profile-pic {
+    width: 150px;
+    height: 150px;
     border-radius: 50%;
-    position: absolute;
-   
-    transform: translate(15%,17%);
- 
-} */
-#span_under{
-height:20px;
-    width: 20px;
-    background: rgb(17, 17, 17);
-    border-radius: 50%;
-    position: absolute;
-    transform:scale(0.8);
-    box-shadow: inset 0 0 3px rgb(138, 136, 136);
-    transform:translate(100%,0) scale(0.8);
+    background-image: url('hard1-removebg-preview.png'); /* Ensure this path is correct */
+    background-size: cover;
+    background-position: center; /* Center the image */
+    margin-top: 2rem;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+    border: 3px solid #4CAF50; /* Add a border for visual appeal */
 }
 
-/* #span_under{
-    height:10px;
-    width: 10px;
-    background-color: aliceblue;
-    border-radius: 50%;
-} */
-#btn{
-    
-    background:black;
-    height: calc(90vh - 150px);
-    width:300px ;
-    text-align: center;
-    display: grid;
-    align-items: center;
-    justify-content: center;
-    grid-template-columns: repeat(4,20%);
-    padding-top: 2%;
-    row-gap: 10px;
-    column-gap: 10px;
-    border-radius:0 0 20px 20px;
-}
-#backspace{
-    /* color:rgb(22, 22, 22) ; */
-    font-size: 20px;
-}
-.b{
-    
-    /* border: 2px solid white; */
-    height: 60px;
-    width: 60px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    border-radius: 50%;
-    /* font-weight: bold; */
-    font-size: 1.7rem;
-  
-
-}
-.b:active{
-    transition: 0.1s;
-    background: linear-gradient(rgb(255, 136, 0),#fa5b05);
-;
-    /* box-shadow:inset 0px 0px 9px rgb(129, 128, 128); */
+/* Navigation Bar */
+nav {
+    background-color: #333;
     color: white;
-}
-#equal{
-  background: linear-gradient(135deg,orange,#eb741e);
-  color: white;
-  font-weight: bold;
-}
-#equal:active{
-    background: linear-gradient(rgb(255, 136, 0),#fa5b05);
-}
-#multiply,#add,#subtract,#divide{
-  /*color:#03fc88;*/
-  color: #03fc49;
- 
-}
-#multiply:active,#add:active,#subtract:active,#divide:active{
-  color:white;
- background: linear-gradient(#03fc88,#2cab0c);
- 
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px; /* Added horizontal padding */
+    flex-wrap: wrap; /* Allow wrapping on smaller screens */
+    position: sticky; /* Make nav sticky */
+    top: 0;
+    width: 100%;
+    z-index: 1000; /* Ensure it stays on top */
 }
 
-#clear,#backspace{
-  color:orange;
+.name {
+    font-size: 28px;
+    display: flex;
+    align-items: center;
+    margin-right: 20px;
+    flex-grow: 1; /* Allows the name to take available space */
 }
-#clear:active,#backspace:active{
-background:linear-gradient(120deg,#f76565,#ad0505);
-  color:white;
-        }
+
+.menu-icon {
+    display: none; /* Hidden by default for larger screens */
+    color: white;
+    font-size: 30px;
+    cursor: pointer;
+    background-color: transparent;
+}
+
+.menu {
+    display: flex; /* Always display as flex for larger screens */
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    position: static; /* No absolute positioning for desktop */
+    background-color: transparent;
+    width: auto;
+}
+
+.menu li {
+    text-align: center;
+    margin: 0 15px; /* Spacing between menu items */
+}
+
+.menu li a {
+    display: block;
+    color: white;
+    text-decoration: none;
+    padding: 10px 0; /* Padding for click area */
+    transition: color 0.3s ease;
+}
+
+.menu li a:hover {
+    color: #4CAF50; /* Green on hover */
+}
+
+/* Mobile Navigation */
+@media only screen and (max-width: 767px) {
+    .menu-icon {
+        display: block; /* Show menu icon on small screens */
+    }
+
+    .menu {
+        display: none; /* Hide menu by default on small screens */
+        flex-direction: column;
+        position: absolute;
+        top: 60px; /* Adjust based on nav height */
+        left: 0;
+        background-color: #333;
+        width: 100%;
+        z-index: 1;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    }
+
+    .menu.show { /* Class added by JS to show menu */
+        display: flex;
+    }
+
+    .menu li {
+        margin: 0;
+        border-bottom: 1px solid #555; /* Separator for menu items */
+    }
+
+    .menu li:last-child {
+        border-bottom: none;
+    }
+
+    .menu li a {
+        padding: 15px;
+    }
+
+    .name {
+        margin-right: 0; /* No right margin for name on small screens */
+        flex-grow: 1;
+    }
+}
+
+/* Common Button Style */
+button {
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    padding: 12px 24px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-left: 20px; /* Space from name */
+}
+
+button:hover {
+    background-color: #3e8e41;
+}
+
+button:active {
+    background-color: #1e5024;
+}
+
+/* Contact Icons Styling */
+.contact-container {
+    position: relative;
+    display: inline-block;
+}
+
+.icons-list {
+    display: none; /* Hidden by default */
+    position: absolute;
+    background-color: #444; /* Darker background for the dropdown */
+    min-width: 180px; /* Increased width for better text display */
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    padding: 10px 0; /* Padding inside the dropdown */
+    border-radius: 5px;
+    top: 100%; /* Position below the button */
+    left: 50%; /* Center horizontally */
+    transform: translateX(-50%); /* Adjust to truly center */
+    animation: fadeIn 0.3s ease-out forwards;
+}
+
+.contact.clicked + .icons-list { /* Show when contact button is clicked */
+    display: block;
+}
+
+.icons-list ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.icons-list li {
+    padding: 8px 15px;
+    text-align: left;
+}
+
+.icons-list li a {
+    color: white;
+    text-decoration: none;
+    display: flex; /* For icon and text alignment */
+    align-items: center;
+    transition: color 0.3s ease;
+}
+
+.icons-list li a:hover {
+    color: #4CAF50; /* Green on hover */
+}
+
+.icons-list li i {
+    margin-right: 10px; /* Space between icon and text */
+    font-size: 1.2em; /* Slightly larger icons */
+}
+
+/* Animation for icons list dropdown */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translate(-50%, -10px);
+    }
+    to {
+        opacity: 1;
+        transform: translate(-50%, 0);
+    }
+}
+
+/* Section Common Styling (for About, Projects) */
+section {
+    padding: 60px 0;
+    overflow: hidden; /* Clear floats */
+}
+
+.section-title {
+    text-align: center;
+    padding-bottom: 30px;
+}
+
+.section-title h2 {
+    font-size: 32px;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+    position: relative;
+    color: #333;
+}
+
+.section-title h2::after {
+    content: '';
+    position: absolute;
+    display: block;
+    width: 50px;
+    height: 3px;
+    background: #4CAF50;
+    bottom: 0;
+    left: calc(50% - 25px);
+}
+
+.section-title p {
+    margin-bottom: 0;
+    color: #777;
+    font-size: 16px;
+}
+
+/* Container for responsiveness */
+.container {
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+@media (min-width: 768px) {
+    .container {
+        width: 750px;
+    }
+}
+
+@media (min-width: 992px) {
+    .container {
+        width: 970px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .container {
+        width: 1170px;
+    }
+}
+
+/* About Section */
+.about-section {
+    background-color: #fff;
+}
+
+.about-section p {
+    font-size: 1.1em;
+    line-height: 1.8;
+    color: #555;
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+
+/* Projects Section - Table Based */
+.projects-section {
+    background-color: #f8f8f8; /* A light background for the projects section */
+}
+
+.table-responsive {
+    display: block;
+    width: 100%;
+    overflow-x: auto; /* Allow horizontal scrolling on small screens */
+    -webkit-overflow-scrolling: touch; /* For smoother scrolling on touch devices */
+}
+
+.table {
+    width: 100%;
+    margin-bottom: 1rem;
+    color: #212529; /* Dark text */
+    border-collapse: collapse; /* Collapse table borders */
+}
+
+.table thead th {
+    vertical-align: bottom;
+    border-bottom: 2px solid #dee2e6;
+    padding: 1rem;
+    text-align: left;
+}
+
+.table tbody td {
+    padding: 1rem;
+    vertical-align: top;
+    border-top: 1px solid #dee2e6;
+}
+
+.table-bordered {
+    border: 1px solid #dee2e6;
+}
+
+.table-bordered th,
+.table-bordered td {
+    border: 1px solid #dee2e6;
+}
+
+.table-striped tbody tr:nth-of-type(odd) {
+    background-color: rgba(0, 0, 0, 0.05); /* Light stripe effect */
+}
+
+.thead-dark th {
+    color: #fff;
+    background-color: #343a40; /* Dark header background */
+    border-color: #454d55;
+}
+
+/* Links within the table */
+.table a {
+    color: #4CAF50; /* Green links */
+    text-decoration: none;
+    transition: color 0.2s ease-in-out;
+}
+
+.table a:hover {
+    color: #3e8e41; /* Darker green on hover */
+    text-decoration: underline;
+}
+
+/* Footer Styling */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    font-size: 0.9em;
+}
+
+footer p {
+    margin: 0;
+}

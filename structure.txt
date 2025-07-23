@@ -1,0 +1,85 @@
+.
+├── .git
+│   ├── COMMIT_EDITMSG
+│   ├── FETCH_HEAD
+│   ├── HEAD
+│   ├── ORIG_HEAD
+│   ├── config
+│   ├── description
+│   ├── hooks
+│   │   ├── applypatch-msg.sample
+│   │   ├── commit-msg.sample
+│   │   ├── fsmonitor-watchman.sample
+│   │   ├── post-update.sample
+│   │   ├── pre-applypatch.sample
+│   │   ├── pre-commit.sample
+│   │   ├── pre-merge-commit.sample
+│   │   ├── pre-push.sample
+│   │   ├── pre-rebase.sample
+│   │   ├── pre-receive.sample
+│   │   ├── prepare-commit-msg.sample
+│   │   ├── push-to-checkout.sample
+│   │   └── update.sample
+│   ├── index
+│   ├── info
+│   │   └── exclude
+│   ├── logs
+│   │   ├── HEAD
+│   │   └── refs
+│   │       ├── heads
+│   │       │   └── main
+│   │       └── remotes
+│   │           └── origin
+│   │               ├── HEAD
+│   │               └── main
+│   ├── objects
+│   │   ├── 18
+│   │   │   └── 412ec7f9dfa7e6035a3d3433386e42942efa53
+│   │   ├── 23
+│   │   │   └── e03154860dd092812d9203bdb5508a65837127
+│   │   ├── 33
+│   │   │   └── f4fcfab71cf2b5cba607383fb13709ee2fe98c
+│   │   ├── 5b
+│   │   │   └── 19bc9e641fa07084c260d6f9a4e91571e7812b
+│   │   ├── 61
+│   │   │   └── 1bcb7bfd72f0dda0ce08a3d7689522d37f88e5
+│   │   ├── 80
+│   │   │   └── d8813e82d30e80a977ec823476954800a3bf6d
+│   │   ├── 88
+│   │   │   └── 4bb95ad7a165dcbcaf2493ea21c6497b160ab8
+│   │   ├── 99
+│   │   │   └── 38149f6c157dc8b8691fdae5757f93b33be793
+│   │   ├── a1
+│   │   │   └── b863c7a8c39ba47bb887081632e293915a80c3
+│   │   ├── aa
+│   │   │   └── f042650d531395b124f548b99948b93ee9f0c2
+│   │   ├── b5
+│   │   │   ├── 86b7a96c614d925d32b73aa6f8b27eb3260ad9
+│   │   │   └── a57e3bb81278a52d45ec60dc8d90015f918ca7
+│   │   ├── b9
+│   │   │   └── 490fd4ac8235bfbb01d72c0fd4d25d7166b1a8
+│   │   ├── e1
+│   │   │   └── f8b8d58dec06a6455eda3a7dcc6b6f7fd10741
+│   │   ├── e5
+│   │   │   └── 7faa9263451bc5741cb7fdbc4cf382c8953e80
+│   │   ├── e6
+│   │   │   └── 9de29bb2d1d6434b8b29ae775ad8c2e48c5391
+│   │   └── pack
+│   │       ├── pack-cb9fc020ca512143b531c5d03c1d03b9242a0375.idx
+│   │       └── pack-cb9fc020ca512143b531c5d03c1d03b9242a0375.pack
+│   ├── packed-refs
+│   └── refs
+│       ├── heads
+│       │   └── main
+│       └── remotes
+│           └── origin
+│               ├── HEAD
+│               └── main
+├── README.md
+├── hard.js
+├── hard1-removebg-preview.png
+├── index.html
+├── structure.txt
+└── style.css
+
+30 directories, 53 files
